@@ -1,0 +1,29 @@
+mixin b-case-nav()
+  .container-fluid.bg-dark
+    .b-case-nav.row
+      a.b-case-nav__item.col-6(href="#")
+        .b-case-nav__img
+          picture
+            source(srcset="assets/media/content/b-case-nav/1.webp" type="image/webp")
+            img.img-scale(src="assets/media/content/b-case-nav/1.jpg" alt="photo" loading="lazy" decoding="async")
+        .b-case-nav__link
+          != pugHelpers.Icon.call(locals, {iconName: 'arrow-down', className: 'ic ic-rot_90', iconWidth: '16', iconHeight: '16'})
+          |
+          | Previous
+
+      a.b-case-nav__item.col-6.text-right(href="#")
+        .b-case-nav__img
+          picture
+            source(srcset="assets/media/content/b-case-nav/2.webp" type="image/webp")
+            img.img-scale(src="assets/media/content/b-case-nav/2.jpg" alt="photo" loading="lazy" decoding="async")
+        .b-case-nav__link Next
+          |
+          |
+          != pugHelpers.Icon.call(locals, {iconName: 'arrow-down', className: 'ic ic-rot_-90', iconWidth: '16', iconHeight: '16'})
+
+
+  // end .b-case-nav
+  |
+  |
+
+

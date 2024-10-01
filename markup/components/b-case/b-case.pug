@@ -1,0 +1,76 @@
+mixin b-case()
+  .b-case-group
+    .b-case-filter
+      .b-case-filter__item.dropdown
+        button.b-case-filter__trigger.dropdown-toggle#dropdownServices(type="button" data-toggle="dropdown" aria-expanded="false"  aria-haspopup="true") by service
+        .b-case-filter__body.dropdown-menu(aria-labelledby="dropdownServices")
+          a.b-case-filter__link.dropdown-item(href="#") joomla
+          a.b-case-filter__link.dropdown-item(href="#") webasyst
+          a.b-case-filter__link.dropdown-item(href="#") prestashop
+
+      .b-case-filter__item.dropdown
+        button.b-case-filter__trigger.dropdown-toggle#dropdownPlatform(type="button" data-toggle="dropdown" aria-expanded="false"  aria-haspopup="true") by platform
+        .b-case-filter__body.dropdown-menu(aria-labelledby="dropdownPlatform")
+          a.b-case-filter__link.dropdown-item(href="#") joomla
+          a.b-case-filter__link.dropdown-item(href="#") webasyst
+          a.b-case-filter__link.dropdown-item(href="#") prestashop
+
+      .b-case-filter__item.dropdown
+        button.b-case-filter__trigger.dropdown-toggle#dropdownTechnology(type="button" data-toggle="dropdown" aria-expanded="false"  aria-haspopup="true") by technology
+        .b-case-filter__body.dropdown-menu(aria-labelledby="dropdownTechnology")
+          a.b-case-filter__link.dropdown-item(href="#") joomla
+          a.b-case-filter__link.dropdown-item(href="#") webasyst
+          a.b-case-filter__link.dropdown-item(href="#") prestashop
+
+      .b-case-filter__item.dropdown
+        button.b-case-filter__trigger.dropdown-toggle#dropdownCustomers(type="button" data-toggle="dropdown" aria-expanded="false"  aria-haspopup="true") by client
+        .b-case-filter__body.dropdown-menu(aria-labelledby="dropdownCustomers")
+          a.b-case-filter__link.dropdown-item(href="#") joomla
+          a.b-case-filter__link.dropdown-item(href="#") webasyst
+          a.b-case-filter__link.dropdown-item(href="#") prestashop
+
+
+    .b-case.row
+      .col-md-7
+        .b-case__img
+          picture
+            source(srcset="assets/media/content/b-case/1.webp" type="image/webp")
+            img.img-scale(src="assets/media/content/b-case/1.jpg" alt="photo" loading="lazy" decoding="async")
+      .col-md-5
+        .b-case__main
+          a.b-case__title.ui-title-inner(href="works-item.html") We accelerated the catalog filter for the largest online stove store
+          a.b-case__link(href="https://usfireplacestore.com/" target="_blank") usfireplacestore.com
+          ul.ui-tag-list-2.list-unstyled
+            li.ui-tag-list-2__item joomla
+            li.ui-tag-list-2__item webasyst
+            li.ui-tag-list-2__item prestashop
+            li.ui-tag-list-2__item osCommerce
+            li.ui-tag-list-2__item DHL
+            li.ui-tag-list-2__item.ui-tag-list-2__item_dots
+
+    .b-case.row
+      .col-md-7
+        .b-case__img
+          picture
+            source(srcset="assets/media/content/b-case/2.webp" type="image/webp")
+            img.img-scale(src="assets/media/content/b-case/2.jpg" alt="photo" loading="lazy" decoding="async")
+      .col-md-5
+        .b-case__main
+          a.b-case__title.ui-title-inner(href="works-item.html") Development of a module for goods delivery
+          a.b-case__link(href="https://www.amazon.com/" target="_blank") Amazon
+          ul.ui-tag-list-2.list-unstyled
+            li.ui-tag-list-2__item joomla
+            li.ui-tag-list-2__item webasyst
+            li.ui-tag-list-2__item prestashop
+            li.ui-tag-list-2__item osCommerce
+            li.ui-tag-list-2__item DHL
+            li.ui-tag-list-2__item.ui-tag-list-2__item_dots
+
+    a.btn-link(href="#") Show all cases
+
+
+  // end .b-case
+  |
+  |
+
+

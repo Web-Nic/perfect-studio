@@ -1,0 +1,200 @@
+mixin b-modal-stages()
+  .modal.fade#stagesModal(tabindex="-1" role="dialog" aria-hidden="true")
+    .modal-dialog.modal-dialog_full(role="document")
+      .modal-content
+
+        .b-stages-header
+          .container-fluid
+            .row.justify-content-between.align-items-center
+              .col
+                a.b-stages-header__logo(href="/")
+                  img(src="assets/media/general/logo.svg" alt="Logo" loading="lazy" decoding="async")
+              .col-auto
+                button.b-stages-header__link(type="button" data-dismiss="modal" aria-label="Close") Close form
+
+
+        form.b-stages.ui-form.needs-validation(novalidate)
+          .container-fluid
+            .row
+              .col-lg-4
+                .b-stages-nav
+                  .ui-label Step  1 of 5
+                  .b-stages__title Select
+                    span.text-primary  your task
+                    |  type
+                  ul.b-stages-nav__list.list-unstyled
+                    li.b-stages-nav__item.active
+                      != pugHelpers.Icon.call(locals, {iconName: 'ic-stages-1', className: 'ic', iconWidth: '24', iconHeight: '24'})
+                      |
+                      |  Type
+                    li.b-stages-nav__item.current Service
+                    li.b-stages-nav__item Price
+                    li.b-stages-nav__item When do we start?
+                    li.b-stages-nav__item A little bit about yourself
+
+
+              .col-lg-8
+                .b-stages-main
+                  .b-stages__section.js-stages-section.active
+                    ul.b-stages-list.list-unstyled.row
+                      li.b-stages-list__item.col-xl-3.col-lg-6.col-md-3.js-stages-trigger
+                        input#stages1Radio1.d-none(type="radio" name="stages1" checked)
+                        label.b-stages-list__radio(for="stages1Radio1")
+                          != pugHelpers.Icon.call(locals, {iconName: 'ic-stages-1', className: 'ic', iconWidth: '60', iconHeight: '60'})
+                          span.b-stages-list__label Online store
+                      li.b-stages-list__item.col-xl-3.col-lg-6.col-md-3.js-stages-trigger
+                        input#stages1Radio2.d-none(type="radio" name="stages1")
+                        label.b-stages-list__radio(for="stages1Radio2")
+                          != pugHelpers.Icon.call(locals, {iconName: 'ic-stages-2', className: 'ic', iconWidth: '60', iconHeight: '60'})
+                          span.b-stages-list__label Service
+                      li.b-stages-list__item.col-xl-3.col-lg-6.col-md-3.js-stages-trigger
+                        input#stages1Radio3.d-none(type="radio" name="stages1")
+                        label.b-stages-list__radio(for="stages1Radio3")
+                          != pugHelpers.Icon.call(locals, {iconName: 'ic-stages-3', className: 'ic', iconWidth: '60', iconHeight: '60'})
+                          span.b-stages-list__label Portal
+                      li.b-stages-list__item.col-xl-3.col-lg-6.col-md-3.js-stages-trigger
+                        input#stages1Radio4.d-none(type="radio" name="stages1")
+                        label.b-stages-list__radio(for="stages1Radio4")
+                          != pugHelpers.Icon.call(locals, {iconName: 'ic-stages-4', className: 'ic', iconWidth: '60', iconHeight: '60'})
+                          span.b-stages-list__label Other
+
+                  .b-stages__section.js-stages-section
+                    ul.b-stages-list.list-unstyled.row
+                      li.b-stages-list__item.col-xl-3.col-lg-6.col-md-3.js-stages-trigger
+                        input#stages2Radio1.d-none(type="radio" name="stages2")
+                        label.b-stages-list__radio(for="stages2Radio1")
+                          != pugHelpers.Icon.call(locals, {iconName: 'ic-stages-5', className: 'ic', iconWidth: '60', iconHeight: '60'})
+                          span.b-stages-list__label Development
+                      li.b-stages-list__item.col-xl-3.col-lg-6.col-md-3.js-stages-trigger
+                        input#stages2Radio2.d-none(type="radio" name="stages2")
+                        label.b-stages-list__radio(for="stages2Radio2")
+                          != pugHelpers.Icon.call(locals, {iconName: 'ic-stages-6', className: 'ic', iconWidth: '60', iconHeight: '60'})
+                          span.b-stages-list__label Refinement of existing
+                      li.b-stages-list__item.col-xl-3.col-lg-6.col-md-3.js-stages-trigger
+                        input#stages2Radio3.d-none(type="radio" name="stages2")
+                        label.b-stages-list__radio(for="stages2Radio3")
+                          != pugHelpers.Icon.call(locals, {iconName: 'ic-stages-7', className: 'ic', iconWidth: '60', iconHeight: '60'})
+                          span.b-stages-list__label Support
+                      li.b-stages-list__item.col-xl-3.col-lg-6.col-md-3.js-stages-trigger
+                        input#stages2Radio4.d-none(type="radio" name="stages2")
+                        label.b-stages-list__radio(for="stages2Radio4")
+                          != pugHelpers.Icon.call(locals, {iconName: 'ic-stages-4', className: 'ic', iconWidth: '60', iconHeight: '60'})
+                          span.b-stages-list__label Other
+
+                  .b-stages__section.js-stages-section
+                    .ui-tag-list.ui-tag-list_check
+                      label.ui-tag-list__item.js-stages-trigger
+                        input#stages3Radio3.d-none(type="radio" name="stages3")
+                        | prestashop
+                      label.ui-tag-list__item.js-stages-trigger
+                        input#stages3Radio4.d-none(type="radio" name="stages3")
+                        | magento
+                      label.ui-tag-list__item.js-stages-trigger
+                        input#stages3Radio4.d-none(type="radio" name="stages3")
+                        | cs-cart
+                      label.ui-tag-list__item.js-stages-trigger
+                        input#stages3Radio5.d-none(type="radio" name="stages3")
+                        | opencart
+                      label.ui-tag-list__item.js-stages-trigger
+                        input#stages3Radio6.d-none(type="radio" name="stages3")
+                        | x-cart
+                      label.ui-tag-list__item.js-stages-trigger
+                        input#stages3Radio7.d-none(type="radio" name="stages3")
+                        | oscommerc
+                      label.ui-tag-list__item.js-stages-trigger
+                        input#stages3Radio8.d-none(type="radio" name="stages3")
+                        | joomla virtuemart
+                      label.ui-tag-list__item.js-stages-trigger
+                        input#stages3Radio9.d-none(type="radio" name="stages3")
+                        | zend framework
+                      label.ui-tag-list__item.js-stages-trigger
+                        input#stages3Radio10.d-none(type="radio" name="stages3")
+                        | php, asp frameworks
+                      label.ui-tag-list__item.ui-tag-list__item_dots.js-stages-trigger
+
+                  .b-stages__section.js-stages-section
+                    ul.b-stages-list.list-unstyled.row
+                      li.b-stages-list__item.col-xl-3.col-lg-6.col-md-3.js-stages-trigger
+                        input#stages4Radio1.d-none(type="radio" name="stages4")
+                        label.b-stages-list__radio(for="stages4Radio1")
+                          != pugHelpers.Icon.call(locals, {iconName: 'ic-stages-5', className: 'ic', iconWidth: '60', iconHeight: '60'})
+                          span.b-stages-list__label from $2,000
+                      li.b-stages-list__item.col-xl-3.col-lg-6.col-md-3.js-stages-trigger
+                        input#stages4Radio2.d-none(type="radio" name="stages4")
+                        label.b-stages-list__radio(for="stages4Radio2")
+                          != pugHelpers.Icon.call(locals, {iconName: 'ic-stages-6', className: 'ic', iconWidth: '60', iconHeight: '60'})
+                          span.b-stages-list__label from $5,000
+                      li.b-stages-list__item.col-xl-3.col-lg-6.col-md-3.js-stages-trigger
+                        input#stages4Radio3.d-none(type="radio" name="stages4")
+                        label.b-stages-list__radio(for="stages4Radio3")
+                          != pugHelpers.Icon.call(locals, {iconName: 'ic-stages-7', className: 'ic', iconWidth: '60', iconHeight: '60'})
+                          span.b-stages-list__label from $10,000
+                      li.b-stages-list__item.col-xl-3.col-lg-6.col-md-3.js-stages-trigger
+                        input#stages4Radio4.d-none(type="radio" name="stages4")
+                        label.b-stages-list__radio(for="stages4Radio4")
+                          != pugHelpers.Icon.call(locals, {iconName: 'ic-stages-4', className: 'ic', iconWidth: '60', iconHeight: '60'})
+                          span.b-stages-list__label Other
+
+                  .b-stages__section.js-stages-section
+                    ul.b-stages-list.list-unstyled.row
+                      li.b-stages-list__item.col-xl-3.col-lg-6.col-md-3.js-stages-trigger
+                        input#stages5Radio1.d-none(type="radio" name="stages5")
+                        label.b-stages-list__radio(for="stages1Radio1")
+                          != pugHelpers.Icon.call(locals, {iconName: 'ic-stages-8', className: 'ic', iconWidth: '60', iconHeight: '60'})
+                          span.b-stages-list__label Immediately
+                      li.b-stages-list__item.col-xl-3.col-lg-6.col-md-3.js-stages-trigger
+                        input#stages5Radio2.d-none(type="radio" name="stages5")
+                        label.b-stages-list__radio(for="stages5Radio2")
+                          != pugHelpers.Icon.call(locals, {iconName: 'ic-stages-9', className: 'ic', iconWidth: '60', iconHeight: '60'})
+                          span.b-stages-list__label This week
+                      li.b-stages-list__item.col-xl-3.col-lg-6.col-md-3.js-stages-trigger
+                        input#stages5Radio3.d-none(type="radio" name="stages5")
+                        label.b-stages-list__radio(for="stages5Radio3")
+                          != pugHelpers.Icon.call(locals, {iconName: 'ic-stages-10', className: 'ic', iconWidth: '60', iconHeight: '60'})
+                          span.b-stages-list__label This month
+                      li.b-stages-list__item.col-xl-3.col-lg-6.col-md-3.js-stages-trigger
+                        input#stages5Radio4.d-none(type="radio" name="stages5")
+                        label.b-stages-list__radio(for="stages5Radio4")
+                          != pugHelpers.Icon.call(locals, {iconName: 'ic-stages-4', className: 'ic', iconWidth: '60', iconHeight: '60'})
+                          span.b-stages-list__label Other
+
+                  .b-stages__section
+                    .b-stages__wrap
+                      .form-row
+                        .b-stages__input-group.col-md-4
+                          label.ui-form__label What is your name
+                          input.form-control(type="text" placeholder="Steve Jobs" required)
+                          .invalid-tooltip Enter your details
+                        .b-stages__input-group.col-md-4
+                          label.ui-form__label Phone number
+                          input.form-control(type="tel" placeholder="+1" required)
+                          .invalid-tooltip Enter your details
+                        .b-stages__input-group.col-md-4
+                          label.ui-form__label Email
+                          input.form-control(type="email" placeholder="hello@gmail.com" required)
+                          .invalid-tooltip Enter your details
+
+                      .form-row
+                        .b-stages__input-group.col-md-8
+                          label.ui-form__label describe the task
+                          input.form-control(type="text" placeholder="Describe..." required)
+                          .invalid-tooltip Enter your details
+                        .b-stages__input-group.col-md-4
+                          label.ui-form__label add file
+                          input(type="file" id="file" name="myfiles[]" multiple required)
+                          .invalid-tooltip Enter your details
+
+                      button.ui-form__submit Send
+
+        .b-stages-success
+          .b-stages-success__wrap
+            .b-stages-success__inner
+              != pugHelpers.Icon.call(locals, {iconName: 'success', className: 'ic', iconWidth: '80', iconHeight: '76.5'})
+              .b-stages-success__title THANK YOU!
+              .b-stages-success__info We will contact you shortly
+
+  // end .b-modal-stages
+  |
+  |
+
+

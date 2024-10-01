@@ -1,0 +1,17 @@
+extends _template.pug
+
+include ../components/b-main-slider/b-main-slider
+include ../components/b-scroll-circles/b-scroll-circles
+
+block head
+  head
+    +head(head.home)
+
+
+block header
+  +header('', '')
+
+
+block content
+  +b-main-slider()
+  +b-scroll-circles()

@@ -1,0 +1,246 @@
+.b-stages {
+  padding-top: 29vmin;
+  &__title {
+    font: 500 5.2vmin/1.25 Raleway;
+    margin-top: 3vh;
+    margin-bottom: 3.5vh;
+  }
+  &__section {
+    transition: all .3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    left: -9999px;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity .5s,left 0s .5s;
+    padding-bottom: 20px;
+    &.active {
+      left: 0;
+      opacity: 1;
+      transition: opacity .5s,left 0s 0s;
+      z-index: 5;
+      position: relative;
+    }
+  }
+  &__wrap {
+    padding: 2.2vh 0 0 33px;
+  }
+  &__input-group {
+    margin-bottom: 5vh;
+  }
+
+  .form-row {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  .form-row > .col,
+  .form-row > [class*="col-"] {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .ui-tag-list {
+    padding: 4.5vh 0 0 34px;
+  }
+
+  @include media-breakpoint-down(md) {
+    &__wrap,
+    .ui-tag-list {
+      padding-top: 1vmin;
+      padding-left: 0;
+    }
+    &__input-group {
+      margin-bottom: 4vmin;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    &__wrap {
+      padding-top: 20px;
+    }
+  }
+}
+
+.b-stages-main {
+  margin-top: 10.5vh;
+  position: relative;
+
+
+  @include media-breakpoint-down(md) {
+    margin-top: 1vmin;
+  }
+}
+
+.b-stages-nav {
+  position: relative;
+  padding-right: 3vw;
+  z-index: 10;
+  &__list {
+    padding-top: 3.7vh;
+    border-top: 1px solid rgba(29, 29, 29, 0.2);
+  }
+  &__item {
+    font-family: Raleway;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 26px;
+    color: rgba(29, 29, 29, 0.4);
+    margin-bottom: 12px;
+    .ic {
+      vertical-align: sub;
+    }
+    &.active {
+      color: $primary;
+    }
+    &.current {
+      color: #1D1D1D;
+    }
+  }
+}
+
+.b-stages-list {
+  margin-left: -10px;
+  margin-right: -10px;
+  &__item {
+    height: 25.4vmin;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  &__radio {
+    background-color: transparent;
+    border: 1px solid rgba(29, 29, 29, 0.2);
+    height: 100%;
+    text-align: left;
+    position: relative;
+    width: 100%;
+    transition: all .3s;
+    cursor: pointer;
+    .ic {
+      position: absolute;
+      left: 3.2vmin;
+      top: 3.5vmin;
+    }
+
+    &:hover {
+      border-color: $primary;
+    }
+  }
+  &__label {
+    font: 500 1.85vmin/1.3 Raleway;
+    position: absolute;
+    left: 3.2vmin;
+    right: 3.2vmin;
+    bottom: 3.5vmin;
+    display: block;
+  }
+
+  @include media-breakpoint-down(lg) {
+    &__item {
+      margin-bottom: 2vmin;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    &__label {
+      left: 2.2vmin;
+      right: 2.2vmin;
+      font-size: 17px;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    &__item {
+      height: auto;
+    }
+    &__radio {
+      padding: 20px;
+      .ic {
+        position: relative;
+        top: 0;
+        left: 0;
+      }
+    }
+    &__label {
+      margin-top: 10px;
+      position: relative;
+      right: 0;
+      left: 0;
+      bottom: auto;
+    }
+  }
+}
+
+
+.b-stages-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: inherit;
+  padding-top: 5.6vh;
+  padding-bottom: 5.6vh;
+
+  &__logo {
+    display: inline-block;
+    height: 5.5vh;
+    img {
+      height: 100%;
+    }
+  }
+  &__link {
+    display: inline-block;
+    font: 800 2.2vmin Raleway;
+    color: #1D1D1D;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    text-align: left;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 24px;
+    padding-bottom: 20px;
+    &__logo {
+      height: 32px;
+    }
+  }
+
+  @include media-breakpoint-down(xs) {
+    padding-top: 20px;
+  }
+}
+
+.b-stages-success {
+  display: none;
+  &__wrap {
+    text-align: center;
+    padding-top: 29vmin;
+    padding-bottom: 29vmin;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .ic {
+    display: inline-block;
+    fill: #009a00;
+  }
+  &__title {
+    margin: 34px 0 20px;
+    font-size: 36px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+  }
+  &__info {
+    font-weight: 500;
+    font-size: 27px;
+    color: rgba(29, 29, 29, 0.7);
+    letter-spacing: .15em;
+  }
+}

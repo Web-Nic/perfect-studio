@@ -1,0 +1,10 @@
+.b-technology {
+  &__section {
+    &:not(:last-child) {
+      margin-bottom: 84px;
+    }
+    .ui-title-inner {
+      margin-bottom: 42px;
+    }
+  }
+}

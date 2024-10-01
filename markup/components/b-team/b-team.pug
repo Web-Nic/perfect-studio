@@ -1,0 +1,53 @@
+mixin b-team()
+  section.section-default
+    .container
+      .ui-header
+        .ui-title-group.row.align-items-xl-baseline.align-items-end
+          .col-md
+            h2.ui-title Leading
+              span.text-primary  specialists
+          .col-auto
+            .ui-category Vacancies
+              span.ui-category__total 02
+
+    .container-fluid
+      .b-team-group.row
+        .b-team.active.col-lg
+          span.b-team__number 01
+          .b-team__wrap-img
+            .b-team__img
+              picture
+                source(srcset="assets/media/content/b-team/1.webp" type="image/webp")
+                img.img-scale(src="assets/media/content/b-team/1.png" alt="photo" loading="lazy" decoding="async")
+          .b-team__main
+            .b-team__name Steve Jobs
+            .b-team__category CO Founder
+
+        .b-team.col-lg
+          span.b-team__number 02
+          .b-team__wrap-img
+            .b-team__img
+              picture
+                source(srcset="assets/media/content/b-team/1.webp" type="image/webp")
+                img.img-scale(src="assets/media/content/b-team/1.png" alt="photo" loading="lazy" decoding="async")
+          .b-team__main
+            .b-team__name Steve Jobs
+            .b-team__category technical director
+        .b-team.col-lg
+          span.b-team__number 03
+          .b-team__wrap-img
+            .b-team__img
+              picture
+                source(srcset="assets/media/content/b-team/1.webp" type="image/webp")
+                img.img-scale(src="assets/media/content/b-team/1.png" alt="photo" loading="lazy" decoding="async")
+          .b-team__main
+            .b-team__name Steve Jobs
+            .b-team__category team leader
+
+
+
+
+
+  // end .b-team
+
+

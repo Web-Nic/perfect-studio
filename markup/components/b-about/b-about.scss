@@ -1,0 +1,17 @@
+.b-about {
+  padding-top: 57px;
+  background-color: #FFF;
+  color: $black;
+  &__info {
+    padding-top: 30px;
+    padding-bottom: 153px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 0;
+    &__info {
+      padding-top: 20px;
+      padding-bottom: 40px;
+    }
+  }
+}

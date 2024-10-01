@@ -1,0 +1,125 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: inherit;
+  &__top {
+    border-bottom: 2px solid  rgba(29, 29, 29, 0.2);
+    transition: all .3s;
+    padding-top: 5.6vh;
+    padding-bottom: 5.6vh;
+  }
+
+  &__logo {
+    display: inline-block;
+    height: 5.5vh;
+    img {
+      height: 100%;
+    }
+  }
+  &__link {
+    display: inline-block;
+    font: 800 1.85vh Raleway;
+    color: #1D1D1D;
+    margin-right: 80px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    text-align: left;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__nav {
+    padding-top: 7vh;
+    padding-bottom: 12vh;
+  }
+
+  &.active {
+    box-shadow: 4px 4px 64px rgba(29, 29, 29, 0.04);
+
+  }
+
+  &.active & {
+    &__top {
+      border-bottom-color: transparent;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    &__logo {
+      height: 32px;
+    }
+    &__top {
+      padding-top: 24px;
+      padding-bottom: 20px;
+    }
+    &__nav {
+      padding-top: 42px;
+      padding-bottom: 27px;
+    }
+  }
+
+  @include media-breakpoint-down(xs) {
+    &__top {
+      padding-top: 20px;
+    }
+    &__nav {
+      padding-left: 5px;
+      padding-right: 5px;
+      padding-bottom: 40px;
+    }
+  }
+}
+
+
+.header-contact {
+  padding-bottom: 2.3vh;
+  &__item {
+    margin-top: 5.5vh;
+  }
+  &__link {
+    font-family: Raleway;
+    font-weight: 500;
+    font-size: 3vh;
+    color: #1D1D1D;
+    display: block;
+    margin-bottom: 2vh;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(29, 29, 29, 0.4);
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding-left: 10.5vw;
+    margin-top: 11px;
+    padding-bottom: 0;
+    &__item {
+      margin-top: 0;
+      &:not(:last-child) {
+        margin-bottom: 26px;
+      }
+    }
+    &__link {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    &__title {
+      font-size: 10px;
+    }
+  }
+
+  @include media-breakpoint-down(xs) {
+    padding-left: 0;
+  }
+}

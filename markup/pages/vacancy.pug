@@ -1,0 +1,37 @@
+extends _template.pug
+
+include ../components/b-vacancy-item/b-vacancy-item
+
+
+
+
+block head
+  head
+    +head(head.team)
+
+
+  - var pageInner = true;
+
+
+block header
+  +header()
+
+
+block content
+  .l-main
+    .container-fluid
+      nav(aria-label="breadcrumb")
+        ol.breadcrumb
+          li.breadcrumb-item
+            a(href="/") Home
+          li.breadcrumb-item
+            a(href="team.html") Team
+          li.breadcrumb-item.active(aria-current="page") Job vacancy
+    // end .breadcrumb
+    |
+    |
+
+
+    main.l-main-content.l-main-content_btm_sm
+
+      +b-vacancy-item()

@@ -1,0 +1,42 @@
+extends _template.pug
+
+include ../components/b-about/b-about
+include ../components/b-scroll-circles/b-scroll-circles
+include ../components/b-team/b-team
+include ../components/b-time/b-time
+include ../components/b-technology/b-technology
+include ../components/b-vacancy/b-vacancy
+
+
+
+
+block head
+  head
+    +head(head.team)
+
+
+  - var pageInner = true;
+
+
+block header
+  +header()
+
+
+block content
+  .l-main
+    .container-fluid
+      nav(aria-label="breadcrumb")
+        ol.breadcrumb
+          li.breadcrumb-item
+            a(href="/") Home
+          li.breadcrumb-item.active(aria-current="page") Team
+    // end .container
+
+
+
+    main.l-main-content.bg-dark
+      +b-about()
+      +b-team()
+      +b-time()
+      +b-technology()
+      +b-vacancy()

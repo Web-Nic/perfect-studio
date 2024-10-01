@@ -1,0 +1,104 @@
+mixin b-case-item()
+  article.b-case-f
+    .container
+      header.b-case-f-header
+        .row
+          h1.ui-title.col-xl-10
+            span.text-primary We accelerated the catalog filter
+            |  for the largest online fireplace store
+        .row
+          .b-case-f-header__item.col-md-6
+            a.b-case-f-header__link(href="#") Online store Fireplace Store
+            .b-case-f-header__label Client
+          .b-case-f-header__item.col-md-6
+            a.b-case-f-header__link(href="https://usfireplacestore.com/" target="_blank") usfireplacestore.com
+              != pugHelpers.Icon.call(locals, {iconName: 'external-link', className: 'ic', iconWidth: '16', iconHeight: '16'})
+            .b-case-f-header__label link
+    .b-case-f__img-main
+      picture
+        source(srcset="assets/media/content/b-case-f/1.webp" type="image/webp")
+        img.img-scale(src="assets/media/content/b-case-f/1.jpg" alt="photo" loading="lazy" decoding="async")
+
+    .container
+      section.b-case-f__section
+        h2.ui-title-inner Used
+          span.text-primary  in the project
+        ul.ui-tag-list.list-unstyled
+          li.ui-tag-list__item prestashop
+          li.ui-tag-list__item magento
+          li.ui-tag-list__item cs-cart
+          li.ui-tag-list__item opencart
+          li.ui-tag-list__item x-cart
+          li.ui-tag-list__item oscommerc
+          li.ui-tag-list__item joomla virtuemart
+          li.ui-tag-list__item zend framework
+          li.ui-tag-list__item php, asp frameworks
+
+      section.b-case-f__section
+        h2.ui-title-inner A client came
+          span.text-primary  with a problem
+        .row
+          .col-xl-8
+            p The online cosmetics store decided to switch from the previous cumulative discount system for regular customers to a new bonus system. The current system of cumulative incentives calculated 5 levels of discounts depending on the volume of purchases separately for retail and wholesale customers. Of the 211,237 customers, 31,965 used cumulative discounts.
+            p The client wanted regular retail customers to have the same discounts (but the level no longer increased) and to have the opportunity to switch to a new bonus system. And all new customers simply have to join the bonus program automatically.
+
+          .col-xl-4
+            blockquote.ui-blockquote
+              p The client wanted regular retail customers to have the same discounts (but the level no longer increased) and to have the opportunity to switch to a new bonus system. And all new customers simply have to join the bonus program automatically.
+              footer.ui-blockquote__footer.row.no-gutters.align-items-center
+                .col-auto
+                  picture
+                    source(srcset="assets/media/content/face/1.webp" type="image/webp")
+                    img.ui-blockquote__face.img-scale(src="assets/media/content/face/1.jpg" alt="photo" loading="lazy" decoding="async")
+                .col
+                  span.ui-blockquote__title Adam Smith
+                  span.ui-blockquote__category CO FOUNDER
+
+        figure.b-case-f__figure.ui-figure
+          a.b-case-f__figure-link(href="https://usfireplacestore.com/" target="_blank")
+            .b-case-f__img.lazy-background(style="background-image: url(assets/media/content/b-case-f/2.jpg)")
+          .row
+            .col-lg-6.offset-lg-1
+              figcaption.ui-figure__caption.pl-5 All new customers simply need to be enrolled in the bonus program automatically.
+
+
+      section.b-case-f__section
+        .row.pl-sm-5
+          .col-lg-10.offset-lg-1
+            h2.ui-title-inner There are always
+              span.text-primary  features
+            p The existing accumulation program worked on the basis of a built-in CMS module, for which there was no documentation. The discount accumulated by the client was not reflected anywhere, and it was impossible to disable its effect, leaving the buyer’s savings at the same level.
+            p The number of bonuses for a product, accrual parameters, write-off of bonuses - everything should be managed through 1C. And the site playing a secondary role should also have access to bonuses, without waiting for a response from 1c, and without violating the integrity of the bonus system.
+
+        figure.ui-figure
+          picture
+            source(srcset="assets/media/content/b-case-f/3.webp" type="image/webp")
+            img.ui-figure__img.img-fluid(src="assets/media/content/b-case-f/3.jpg" alt="photo" loading="lazy" decoding="async")
+          .row
+            .col-lg-6.offset-lg-1
+              figcaption.ui-figure__caption.pl-5 All new customers simply need to be enrolled in the bonus program automatically.
+
+
+      section.b-case-f__section
+        .row.pl-sm-5
+          .col-lg-10.offset-lg-1
+            h2.ui-title-inner How
+              span.text-primary  we did it
+            p We collected all possible parameters of apartments and divided them into groups, defining categories for developing filters that the user can operate. In total there were 150 parameters and 8 groups. The system was designed so that a new selection parameter could be added at any time.
+            p For each parameter we chose 3 weighting coefficients. Maximum - if the system considers the parameters important for the client (those that he himself selected in the filter), average weight - for those dependent on the selected parameters, minimum - for all others.
+            p We used the Apache Solr search engine, which allows you to quickly perform operations on large databases. Additionally, it passes functions as fields for selecting and sorting. As a result, tests on the operation of the engine using a sample of 15,000 apartments for various sets of filters showed the output speed within 120-150 ms.
+
+
+
+      .b-case-f__lead
+        .ui-label As a result
+        .lead
+          span.text-primary The client received
+          |  super-fast catalog filter that generates a selection based on the most important parameters in less than 1 second. And we got another satisfied client!
+
+
+  // end .b-case-f
+  |
+  |
+
+

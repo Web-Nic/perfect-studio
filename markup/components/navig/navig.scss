@@ -1,0 +1,45 @@
+.main-menu {
+  padding-left: 5vw;
+  &__item {
+    margin-bottom: 5.1vh;
+  }
+  &__link {
+    font-family: Raleway;
+    font-weight: 500;
+    font-size: 6.5vh;
+    color: #1D1D1D;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding-left: 8.5vw;
+    &__item {
+      margin-bottom: 27px;
+      &:after {
+        display: inline-block;
+        font-weight: 500;
+        font-size: 11px;
+        color: rgba(29, 29, 29, 0.4);
+        content: '0' counter(list);
+        counter-increment: list;
+        margin-left: 12px;
+      }
+    }
+    & &__item {
+      &:before {
+        display: none;
+      }
+    }
+    &__link {
+      font-size: 28px;
+    }
+  }
+
+
+  @include media-breakpoint-down(xs) {
+    padding-left: 0;
+    margin-bottom: 10px;
+  }
+}

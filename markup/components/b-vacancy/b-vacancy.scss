@@ -1,0 +1,72 @@
+.b-vacancy {
+  background-color: #000;
+  padding: 40px 40px 32px;
+  margin-bottom: 20px;
+  &__label {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 10px;
+    text-align: center;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: 2px solid $primary;
+    border-radius: 2px;
+    padding: 8px 15px;
+    margin-bottom: 33px;
+  }
+  &__title {}
+  &__info {
+    font-size: 15px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  &__lead {
+    padding-top: 138px;
+    padding-right: 20px;
+  }
+  &__footer {
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  &__tags-list {
+    margin-bottom: 0;
+  }
+  &__tags-item {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    margin-right: 8px;
+    margin-bottom: 8px;
+    border-radius: 2px;
+    font-weight: 600;
+    font-size: 10px;
+    text-align: center;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 12px 14px 9px;
+    min-width: 48px;
+    &_dots {
+      &:after {
+        content: '';
+        width: 4px;
+        height: 4px;
+        background-color: #FFF;
+        border-radius: 50%;
+        display: inline-block;
+        box-shadow: -8px 0 0 #FFF, 8px 0 0 #FFF;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    &__lead {
+      padding-top: 80px;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    &__lead {
+      padding-top: 60px;
+    }
+  }
+}

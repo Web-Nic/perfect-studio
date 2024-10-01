@@ -1,0 +1,41 @@
+extends _template.pug
+
+include ../components/b-clients/b-clients
+include ../components/b-case-item/b-case-item
+include ../components/b-case-nav/b-case-nav
+
+
+
+
+block head
+  head
+    +head(head.team)
+
+
+  - var pageInner = true;
+
+
+block header
+  +header()
+
+
+block content
+  .l-main
+    .container-fluid
+      nav(aria-label="breadcrumb")
+        ol.breadcrumb
+          li.breadcrumb-item
+            a(href="/") Home
+          li.breadcrumb-item
+            a(href="works.html") Works
+          li.breadcrumb-item.active(aria-current="page") Speed up the catalog filter
+    // end .breadcrumb
+    |
+    |
+
+
+    main.l-main-content
+
+      +b-case-item()
+
+    +b-case-nav()

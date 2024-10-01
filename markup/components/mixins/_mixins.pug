@@ -1,0 +1,55 @@
+.area-bg.area-bg_dark.parallax.stellar(data-stellar-background-ratio="0.8", data-stellar-vertical-offset="100")
+  .area-bg__inner
+
+.area-bg.area-bg_grad.parallax(style="background-image: url(assets/media/content/bg/bg-3.jpg);")
+  .area-bg__inner
+
+.section-title(class!=attributes.class)
+
+
+// Zoom
+
+.js-zoom-gallery
+  a.js-zoom-gallery__item(href="assets/media/content//1.jpg")
+    img.img-responsive(src="assets/media/content//1.jpg", alt="foto")
+
+
+.js-zoom-images
+  a.js-zoom-images__item(href="assets/media/content//1.jpg")
+    img.img-responsive(src="assets/media/content//1.jpg", alt="foto")
+
+
+// Carousel
+
+.owl-carousel.owl-theme.enable-owl-carousel(
+  data-min480="1"
+  data-min768="2"
+  data-min992="2"
+  data-min1200="2"
+  data-pagination="false"
+  data-navigation="true"
+  data-auto-play="400000"
+  data-stop-on-hover="true")
+// end slider
+
+.owl-carousel.owl-theme.enable-owl-carousel(
+  data-pagination="true"
+  data-navigation="false"
+  data-single-item="true"
+  data-auto-play="700000"
+  data-transition-style="fade"
+  data-main-text-animation="true"
+  data-after-init-delay="3000"
+  data-after-move-delay="1000"
+  data-stop-on-hover="true")
+// end slider
+
+
+//
+    +social-net([
+      {'href': "twitter", 'icon': 'twitter'},
+      {'href': "facebook", 'icon': 'facebook'},
+      {'href': "plus.google", 'icon': 'google-plus'},
+      {'href': "instagram", 'icon': 'instagram'},
+      {'href': "youtube", 'icon': 'youtube'},
+      {'href': "behance", 'icon': 'behance'}], '')(class="")

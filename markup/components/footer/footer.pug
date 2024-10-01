@@ -1,0 +1,63 @@
+mixin footer()
+  footer.footer.bg-dark
+    .container-fluid
+      .row.align-items-center
+        .footer__col.col-xl-6
+          .footer__main
+            .ui-label we are in touch
+            .footer__title Always ready <br>to discuss<br>
+              span.footer__title_emphasis.text-primary  new projects
+
+        .footer__col.col-xl-6
+          .footer-contacts
+            .footer-contacts-wrap
+              .spinner
+                != pugHelpers.Icon.call(locals, {iconName: 'ellipse', className: 'ic', iconWidth: '128', iconHeight: '128'})
+
+              .footer-contacts__item.active.js-slider-contacts
+                .footer-contacts__main
+                  .footer-contacts__name.js-contacts-trigger Elon Musk
+                  .footer-contacts__info
+                    a.footer-contacts__link(href="tel:+1234567890") +1 (234) 56-78-90
+                  .footer-contacts__info
+                    a.footer-contacts__link(href="mailto:mail@gmail.com") mail@gmail.com
+                .footer-contacts__img.js-contacts-trigger
+                  img.img-scale(src="assets/media/general/footer/face-1.webp" alt="photo" loading="lazy" decoding="async")
+
+              .footer-contacts__item.js-slider-contacts
+                .footer-contacts__main
+                  .footer-contacts__name.js-contacts-trigger Steve Jobs
+                  .footer-contacts__info
+                    a.footer-contacts__link(href="tel:+1234567890") +1 (234) 56-78-90
+                  .footer-contacts__info
+                    a.footer-contacts__link(href="mailto:mail@gmail.com") mail@gmail.com
+                .footer-contacts__img.js-contacts-trigger
+                  picture
+                    source(srcset="assets/media/general/footer/face-2.webp" type="image/webp")
+                    img.img-scale(src="assets/media/general/footer/face-2.jpg" alt="photo" loading="lazy" decoding="async")
+
+            .footer-contacts-nav
+              .footer-contacts-nav__item.footer-contacts-nav__item_prev.js-contacts-arr
+              .footer-contacts-nav__item.footer-contacts-nav__item_next.js-contacts-arr
+
+
+
+
+      ul.footer-nav.list-unstyled
+        li.footer-nav__item
+          a.footer-nav__link.ui-category(href="works.html") Works
+        li.footer-nav__item
+          a.footer-nav__link.ui-category(href="team.html") Team
+        li.footer-nav__item
+          a.footer-nav__link.ui-category(href="clients.html") Clients
+
+
+      .copyright.row.justify-content-between
+        .col.copyright__item © Perfect Solution 2023
+        .col-auto.copyright__item Design and engineering
+          |
+          |
+          a(href="/") New Studio
+
+  // .footer
+
